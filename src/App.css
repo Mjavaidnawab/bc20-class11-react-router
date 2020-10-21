@@ -17,3 +17,14 @@ body
 .productContainer > .link:hover {
   background-color: lightgray;
 }
+
+.mytext{
+  display: flex;
+  flex-wrap : wrap;
+  background-color: mediumseagreen;
+  text-align: justify;
+  position:absolute;
+  height: 550px;
+  width: 550px;
+  top: 130px;
+}

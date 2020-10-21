@@ -1,16 +1,17 @@
 import React from 'react';
 import Shoes from './../shoes.json';
 import { Link } from 'react-router-dom';
+import useWebAnimations , {flipInY }from "@wellyshen/use-web-animations";
+
 
 
 function Product() {
-  console.log(Shoes)
-  //console.log(Object.keys(Shoes))
+  const { ref , playState} = useWebAnimations ({...flipInY});
 
   return (
     <div >
       <h1> Welcome to Product Page </h1>
-      <div className="productContainer">
+      <div ref = {ref} className="productContainer">
         {Object.keys(Shoes).map(keyName => {
           const shoe = Shoes[keyName];
           console.log(Object.keys)
@@ -18,8 +19,8 @@ function Product() {
             <Link key={keyName}
               className="link"
               to={`/product/${keyName}`}>
-              <h4>{shoe.name}</h4>
-              <img src={shoe.img} height={150} alt="shoe" />
+              <h4 >{shoe.name}</h4>
+              <img  ref = {ref} src={shoe.img} height={150} alt="shoe" />
             </Link>)
         })}
       </div>
