@@ -6,7 +6,7 @@ name: PIAIC Boot Camp 2020 - Class 13 - Project 5 - Animated React Website which
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [ ReactRouterShoeStore ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -34,5 +34,5 @@ jobs:
       - name: installing surge
         run: npm install -g surge
       - name: deploying on surge
-        run: surge ./build http://bc20k-javaidnawab-project5.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
+        run: surge ./build http://bc20k-javaidnawab-project5-tiny-animation.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
 
